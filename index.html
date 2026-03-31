@@ -73,6 +73,7 @@
 <footer class="sf"><div style="margin-bottom:12px"><span style="font-size:11px;color:#9ca3af">Powered by</span> <span style="font-size:16px;color:#404040;font-weight:700">WGM<sup style="font-size:8px">®</sup></span></div><div><a href="https://wgmsa.com/aviso-legal/">Aviso Legal</a><a href="https://wgmsa.com/politica-de-cookies/">Cookies</a><a href="https://wgmsa.com/movilidad-y-proteccion-de-datos/">Protección de Datos</a><a href="https://wgmsa.com/politica-de-calidad-y-medio-ambiente/">Calidad y Medio Ambiente</a></div><div style="font-size:11px;color:#b0b8c4;margin-top:10px">© 2026 Works Gestión de Mantenimiento S.L.</div></footer>
 
 <!-- REACT -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -180,23 +181,26 @@ function LubDiag(){
   const prodData=prods.slice(0,6).map(p=>`${p.name}: ${p.desc} → ${p.url}`).join("\n");
   const issData=issues.map(x=>{const icon=x.sv==="high"?"🔴":x.sv==="med"?"🟡":"🟢";return`${icon} ${x.t}`}).join("\n");
   const scoreLabel=score>=75?"Óptimo":score>=50?"Aceptable":score>=30?"Mejorable":"Crítico";
-  const body={
-    _subject:`Diagnóstico de Lubricación Industrial - ${ans.company} - ${scoreLabel} (${score}/100)`,
+  // Email to WGM (FormSubmit)
+  const wgmBody={
+    _subject:`Nuevo Lead LubDiag: ${ans.company} - ${scoreLabel} (${score}/100)`,
     _captcha:"false",
     _template:"table",
-    _cc:ans.email,
     _replyto:ans.email,
-    "1. CONTACTO":` ${ans.name} | ${ans.company} | ${ans.email} | ${ans.phone||"Sin teléfono"}`,
+    "1. CONTACTO":`${ans.name} | ${ans.company} | ${ans.email} | ${ans.phone||"Sin teléfono"}`,
     "2. SECTOR":IND.find(i=>i.id===ans.industry)?.l||"",
     "3. PUNTUACIÓN":`${score}/100 — ${scoreLabel}`,
     "4. PRÁCTICAS ACTUALES":`Cambios: ${ans.intervalMonths==="never"?"Sin intervalo fijo":"Cada "+ans.intervalMonths+" meses"} | Análisis aceite: ${ans.hasAnalysis==="yes"?"Sí, periódico":ans.hasAnalysis==="sometimes"?"A veces":"No"} | Plan documentado: ${ans.hasPlan==="yes"?"Completo":ans.hasPlan==="partial"?"Parcial":"No"} | Problema: ${ans.mainProblem==="none"?"Ninguno":ans.mainProblem==="failures"?"Fallos":ans.mainProblem==="contamination"?"Contaminación":"Consumo excesivo"}`,
     "5. EQUIPOS Y FRECUENCIAS":eqData,
     "6. HALLAZGOS":issData,
     "7. PRODUCTOS RECOMENDADOS":prodData,
-    "8. RECOMENDACIÓN IA":aiText||"No disponible",
-    "9. AVISO":"Este diagnóstico es orientativo. Consulte con un especialista antes de realizar cambios. Contacte con WGM: lubricantes@wgmsl.com | +34 918 063 172 | https://wgmlubricantes.com"
+    "8. RECOMENDACIÓN IA":aiText||"No disponible"
   };
-  fetch("https://formsubmit.co/ajax/lubricantes@wgmsl.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(body)}).then(()=>{setSending(false);next()}).catch(()=>{setSending(false);next()})
+  const p1=fetch("https://formsubmit.co/ajax/lubricantes@wgmsl.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(wgmBody)}).catch(()=>{});
+  // Email to CLIENT (EmailJS)
+  const clientParams={to_email:ans.email,name:ans.name,company:ans.company,score:`${score}/100 — ${scoreLabel}`,sector:IND.find(i=>i.id===ans.industry)?.l||"",equipos:eqData,hallazgos:issData,productos:prodData,recomendacion:aiText||"No disponible",practicas:`Cambios: ${ans.intervalMonths==="never"?"Sin intervalo fijo":"Cada "+ans.intervalMonths+" meses"} | Análisis: ${ans.hasAnalysis==="yes"?"Sí":"No"} | Plan: ${ans.hasPlan==="yes"?"Completo":ans.hasPlan==="partial"?"Parcial":"No"}`};
+  const p2=emailjs.send("service_t4jc08m","template_rxtwyvd",clientParams,"g88STP-AKXdrzgK5FsD_H").catch(()=>{});
+  Promise.all([p1,p2]).then(()=>{setSending(false);next()})
 };
 
   // STYLES
