@@ -174,7 +174,13 @@ function LubDiag(){
   (async()=>{try{const r=await fetch("https://api.deepseek.com/chat/completions",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer sk-62488986fb9b46b59fd469e7ba2c503e"},body:JSON.stringify({model:"deepseek-chat",max_tokens:600,messages:[{role:"system",content:"Eres ingeniero experto en lubricación industrial de WGM. Respondes en español, técnico pero comprensible. Sin markdown ni listas."},{role:"user",content:prompt}]})});const d=await r.json();setAiText(d.choices?.[0]?.message?.content||"")}catch(e){setAiText("Basado en el análisis de sus equipos y condiciones, le recomendamos revisar las frecuencias indicadas y considerar un plan de lubricación formal. Contacte con el equipo técnico de WGM para una auditoría en planta.")}setAiLoad(false)})()
   },[sk]);
 
-  const handleSend=()=>{setSending(true);setTimeout(()=>{setSending(false);next()},2000)};
+  const handleSend=()=>{setSending(true);
+  const eqData=ans.equipment.map(eq=>{const e=EQ.find(x=>x.id===eq);const c=ans.conditions[eq]||{};return`${e?.l}: temp=${c.temp}, carga=${c.load}, ambiente=${c.environment}, freq=${gf(eq,c.temp,c.load)}`}).join("\n");
+  const prodData=prods.slice(0,6).map(p=>`- ${p.name} (${p.desc}) → ${p.url}`).join("\n");
+  const issData=issues.map(x=>`[${x.sv}] ${x.t}`).join("\n");
+  const body={name:ans.name,email:ans.email,company:ans.company,phone:ans.phone||"No indicado",_subject:`Nuevo diagnóstico LubDiag: ${ans.company}`,_captcha:"false",_template:"table",sector:IND.find(i=>i.id===ans.industry)?.l||"",puntuacion:`${score}/100`,equipos_y_condiciones:eqData,hallazgos:issData,productos_recomendados:prodData,recomendacion_ia:aiText||"No disponible",practicas:`Cambio: ${ans.intervalMonths==="never"?"sin intervalo":ans.intervalMonths+" meses"}, Análisis: ${ans.hasAnalysis}, Plan: ${ans.hasPlan}, Problema: ${ans.mainProblem}`};
+  fetch("https://formsubmit.co/ajax/lubricantes@wgmsl.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(body)}).then(()=>{setSending(false);next()}).catch(()=>{setSending(false);next()})
+};
 
   // STYLES
   const bs=a=>({padding:"11px 15px",borderRadius:10,border:a?"2px solid #1a5276":"1.5px solid rgba(120,130,140,.18)",background:a?"rgba(26,82,118,.06)":"rgba(255,255,255,.5)",color:a?"#1a5276":"#475569",fontWeight:a?600:400,fontSize:14,cursor:"pointer",transition:"all .2s",fontFamily:"'DM Sans'",textAlign:"left",lineHeight:1.4});
