@@ -116,7 +116,7 @@ const EQ=[{id:"hydraulic",l:"Sistemas Hidráulicos",i:"⚙️"},{id:"gearbox",l:
 const FI=["food","pharma"];
 const FR={hydraulic:{low:{light:"8000–10000 h",medium:"6000–8000 h",heavy:"4000–6000 h"},moderate:{light:"6000–8000 h",medium:"4000–6000 h",heavy:"3000–4000 h"},high:{light:"4000–6000 h",medium:"3000–4000 h",heavy:"2000–3000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},gearbox:{low:{light:"10000 h",medium:"8000 h",heavy:"6000 h"},moderate:{light:"8000 h",medium:"6000 h",heavy:"4000 h"},high:{light:"5000 h",medium:"4000 h",heavy:"3000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},bearings:{low:{light:"6 meses",medium:"4 meses",heavy:"2 meses"},moderate:{light:"4 meses",medium:"3 meses",heavy:"6 sem."},high:{light:"3 meses",medium:"6 sem.",heavy:"Mensual"},extreme:{light:"6 sem.",medium:"Mensual",heavy:"Quincenal"}},compressors:{low:{light:"8000 h",medium:"6000 h",heavy:"4000 h"},moderate:{light:"6000 h",medium:"4000 h",heavy:"3000 h"},high:{light:"4000 h",medium:"3000 h",heavy:"2000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},chains:{low:{light:"Semanal",medium:"2x/sem",heavy:"Diario"},moderate:{light:"2x/sem",medium:"Diario",heavy:"Diario"},high:{light:"Diario",medium:"Diario",heavy:"2x/día"},extreme:{light:"Diario",medium:"2x/día",heavy:"Continuo"}},pumps:{low:{light:"8000 h",medium:"6000 h",heavy:"4000 h"},moderate:{light:"6000 h",medium:"4000 h",heavy:"3000 h"},high:{light:"4000 h",medium:"3000 h",heavy:"2000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},motors:{low:{light:"6 meses",medium:"4 meses",heavy:"3 meses"},moderate:{light:"4 meses",medium:"3 meses",heavy:"2 meses"},high:{light:"3 meses",medium:"2 meses",heavy:"Mensual"},extreme:{light:"2 meses",medium:"Mensual",heavy:"Quincenal"}},general:{low:{light:"6 meses",medium:"4 meses",heavy:"3 meses"},moderate:{light:"4 meses",medium:"3 meses",heavy:"2 meses"},high:{light:"3 meses",medium:"2 meses",heavy:"Mensual"},extreme:{light:"2 meses",medium:"Mensual",heavy:"Quincenal"}}};
 const gf=(e,t,l)=>FR[e]?.[t]?.[l]||"Consultar";
-const STP=["industry","equipment","conditions","practices","results","capture","thanks"];
+const STP=["home","industry","equipment","conditions","practices","results","capture","thanks"];
 
 // ─── SMALL UI HELPERS ───
 const Bar=({c,t})=><div style={{width:"100%",height:3,background:"rgba(120,130,140,.15)",borderRadius:2,overflow:"hidden"}}><div style={{width:`${(c/(t-1))*100}%`,height:"100%",background:"linear-gradient(90deg,#1a5276,#2e86c1)",transition:"width .5s cubic-bezier(.4,0,.2,1)",borderRadius:2}}/></div>;
@@ -193,10 +193,58 @@ function LubDiag(){
   <div style={{position:"fixed",inset:0,opacity:.025,pointerEvents:"none",zIndex:0,backgroundImage:"linear-gradient(rgba(0,0,0,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.1) 1px,transparent 1px)",backgroundSize:"40px 40px"}}/>
   <div style={{maxWidth:520,margin:"0 auto",position:"relative",zIndex:1,paddingBottom:cd?60:120,paddingTop:40}}>
 
-  <FIn><div style={{textAlign:"center",marginBottom:32}}><div style={{display:"inline-flex",alignItems:"center",gap:10,marginBottom:16}}><div style={{width:38,height:38,borderRadius:8,background:"linear-gradient(135deg,#1a5276,#2e86c1)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><span style={{fontSize:18,fontWeight:600,color:"#1a5276"}}>LubDiag</span></div><h1 style={{fontFamily:"'Instrument Serif',serif",fontSize:28,fontWeight:400,color:"#0f172a",margin:"0 0 8px",lineHeight:1.2}}>Diagnóstico de Lubricación Industrial</h1><p style={{fontSize:14,color:"#64748b",margin:0,lineHeight:1.5}}>Evalúe sus prácticas en 2 minutos · Recomendaciones por equipo</p></div></FIn>
+  {/* ── LANDING PAGE ── */}
+  {sk==="home"&&<FIn>
+  <div style={{textAlign:"center",paddingTop:20}}>
+    <div style={{width:64,height:64,borderRadius:16,background:"linear-gradient(135deg,#1a5276,#2e86c1)",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 20px",boxShadow:"0 8px 32px rgba(26,82,118,.25)"}}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+    <h1 style={{fontFamily:"'Instrument Serif',serif",fontSize:34,fontWeight:400,color:"#0f172a",margin:"0 0 12px",lineHeight:1.15}}>Diagnóstico de<br/>Lubricación Industrial</h1>
+    <p style={{fontSize:16,color:"#64748b",margin:"0 auto 32px",lineHeight:1.6,maxWidth:400}}>Evalúe las prácticas de lubricación de su planta en 2 minutos y reciba un informe personalizado con recomendaciones por equipo.</p>
 
-  {step<5&&<Bar c={step} t={5}/>}
-  <div style={{marginTop:28}}>
+    <button onClick={next} style={{padding:"16px 40px",borderRadius:12,border:"none",background:"linear-gradient(135deg,#1a5276,#2471a3)",color:"#fff",fontWeight:600,fontSize:17,cursor:"pointer",fontFamily:"'DM Sans'",letterSpacing:".02em",boxShadow:"0 4px 20px rgba(26,82,118,.3)",transition:"all .2s",width:"100%",maxWidth:360,margin:"0 auto",display:"block"}}>Iniciar Diagnóstico Gratuito →</button>
+
+    <div style={{marginTop:40,display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:12}}>
+      <div style={{padding:"16px 12px",borderRadius:12,background:"rgba(255,255,255,.6)",border:"1px solid rgba(120,130,140,.08)"}}>
+        <div style={{fontSize:28,marginBottom:6}}>⚙️</div>
+        <div style={{fontSize:13,fontWeight:600,color:"#1e293b",marginBottom:2}}>Por equipo</div>
+        <div style={{fontSize:11,color:"#94a3b8",lineHeight:1.4}}>Condiciones específicas para cada máquina</div>
+      </div>
+      <div style={{padding:"16px 12px",borderRadius:12,background:"rgba(255,255,255,.6)",border:"1px solid rgba(120,130,140,.08)"}}>
+        <div style={{fontSize:28,marginBottom:6}}>🤖</div>
+        <div style={{fontSize:13,fontWeight:600,color:"#1e293b",marginBottom:2}}>IA Especialista</div>
+        <div style={{fontSize:11,color:"#94a3b8",lineHeight:1.4}}>Recomendación generada por inteligencia artificial</div>
+      </div>
+      <div style={{padding:"16px 12px",borderRadius:12,background:"rgba(255,255,255,.6)",border:"1px solid rgba(120,130,140,.08)"}}>
+        <div style={{fontSize:28,marginBottom:6}}>📦</div>
+        <div style={{fontSize:13,fontWeight:600,color:"#1e293b",marginBottom:2}}>Productos</div>
+        <div style={{fontSize:11,color:"#94a3b8",lineHeight:1.4}}>Lubricantes específicos con enlace directo</div>
+      </div>
+    </div>
+
+    <div style={{marginTop:32,padding:"20px",borderRadius:14,background:"rgba(255,255,255,.5)",border:"1px solid rgba(120,130,140,.08)",textAlign:"left"}}>
+      <div style={{fontSize:13,fontWeight:600,color:"#334155",marginBottom:10}}>¿Qué incluye el diagnóstico?</div>
+      <div style={{display:"flex",flexDirection:"column",gap:8}}>
+        {["Puntuación de sus prácticas de lubricación (0-100)","Frecuencias de lubricación recomendadas por equipo","Análisis personalizado con inteligencia artificial","Productos recomendados del catálogo industrial","Hallazgos y áreas de mejora identificadas","Informe completo enviado a su email"].map((t,i)=>
+          <div key={i} style={{display:"flex",alignItems:"center",gap:8}}>
+            <span style={{width:20,height:20,borderRadius:6,background:"rgba(30,132,73,.1)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,color:"#1e8449",flexShrink:0}}>✓</span>
+            <span style={{fontSize:13,color:"#475569",lineHeight:1.4}}>{t}</span>
+          </div>
+        )}
+      </div>
+    </div>
+
+    <div style={{marginTop:24,display:"flex",alignItems:"center",justifyContent:"center",gap:16,flexWrap:"wrap"}}>
+      <div style={{display:"flex",alignItems:"center",gap:6}}><span style={{fontSize:18}}>🏭</span><span style={{fontSize:12,color:"#64748b"}}>+30 productos</span></div>
+      <div style={{display:"flex",alignItems:"center",gap:6}}><span style={{fontSize:18}}>⏱️</span><span style={{fontSize:12,color:"#64748b"}}>2 minutos</span></div>
+      <div style={{display:"flex",alignItems:"center",gap:6}}><span style={{fontSize:18}}>💰</span><span style={{fontSize:12,color:"#64748b"}}>100% gratuito</span></div>
+    </div>
+  </div>
+  </FIn>}
+
+  {/* ── COMPACT HEADER (wizard steps) ── */}
+  {sk!=="home"&&sk!=="thanks"&&<FIn><div style={{textAlign:"center",marginBottom:24}}><div style={{display:"inline-flex",alignItems:"center",gap:8,marginBottom:8}}><div style={{width:28,height:28,borderRadius:6,background:"linear-gradient(135deg,#1a5276,#2e86c1)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><span style={{fontSize:15,fontWeight:600,color:"#1a5276"}}>LubDiag</span></div></div></FIn>}
+
+  {step>0&&step<6&&<Bar c={step-1} t={5}/>}
+  <div style={{marginTop:sk==="home"?0:28}}>
 
   {sk==="industry"&&<FIn><h2 style={{fontSize:18,fontWeight:600,marginBottom:4}}>Sector Industrial</h2><p style={{fontSize:13,color:"#64748b",marginBottom:20}}>Determina la certificación necesaria (H1, biodegradable…)</p><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>{IND.map(x=><button key={x.id} onClick={()=>up("industry",x.id)} style={bs(ans.industry===x.id)}><span style={{marginRight:8}}>{x.i}</span>{x.l}</button>)}</div><div style={{marginTop:24}}><button onClick={next} disabled={!canN()} style={pb(!canN())}>Continuar</button></div></FIn>}
 
@@ -259,7 +307,7 @@ function LubDiag(){
 
   </div>
   <LF/>
-  {((step>0&&step<5&&sk!=="conditions")||(sk==="conditions"&&ci===0))&&<button onClick={()=>setStep(step-1)} style={{position:"fixed",bottom:cd?20:90,left:20,width:40,height:40,borderRadius:"50%",background:"rgba(255,255,255,.9)",border:"1px solid rgba(120,130,140,.15)",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,color:"#64748b",boxShadow:"0 2px 8px rgba(0,0,0,.06)",zIndex:10}}>←</button>}
+  {((step>1&&step<6&&sk!=="conditions")||(sk==="conditions"&&ci===0))&&<button onClick={()=>setStep(step-1)} style={{position:"fixed",bottom:cd?20:90,left:20,width:40,height:40,borderRadius:"50%",background:"rgba(255,255,255,.9)",border:"1px solid rgba(120,130,140,.15)",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,color:"#64748b",boxShadow:"0 2px 8px rgba(0,0,0,.06)",zIndex:10}}>←</button>}
   </div></div>
   {!cd&&<div style={{position:"fixed",bottom:0,left:0,right:0,zIndex:1000,background:"rgba(15,23,42,.97)",backdropFilter:"blur(8px)",padding:"16px 20px",borderTop:"1px solid rgba(255,255,255,.1)"}}><div style={{maxWidth:520,margin:"0 auto"}}><p style={{fontSize:12,color:"#cbd5e1",lineHeight:1.5,margin:"0 0 12px",fontFamily:"'DM Sans'"}}>Utilizamos cookies para mejorar su experiencia. Más información en nuestra <a href="https://wgmsa.com/politica-de-cookies/" target="_blank" rel="noopener noreferrer" style={{color:"#93c5fd",textDecoration:"underline"}}>Política de Cookies</a>.</p><div style={{display:"flex",gap:10}}><button onClick={()=>setCd(true)} style={{padding:"8px 20px",borderRadius:6,border:"none",background:"#2563eb",color:"#fff",fontSize:12,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans'"}}>Aceptar</button><button onClick={()=>setCd(true)} style={{padding:"8px 20px",borderRadius:6,border:"1px solid rgba(255,255,255,.2)",background:"transparent",color:"#94a3b8",fontSize:12,fontWeight:500,cursor:"pointer",fontFamily:"'DM Sans'"}}>Solo necesarias</button></div></div></div>}
   </>;
