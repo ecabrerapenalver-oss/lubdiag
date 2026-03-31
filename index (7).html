@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Diagnóstico de Lubricación Industrial Gratuito | LubDiag</title>
+  <meta name="description" content="Herramienta gratuita de diagnóstico de lubricación industrial. Evalúe sus prácticas en 2 minutos y reciba recomendaciones personalizadas por equipo con productos específicos y frecuencias de lubricación."/>
+  <meta name="keywords" content="lubricación industrial, diagnóstico lubricación, calculadora lubricación, frecuencia lubricación, lubricantes industriales, plan lubricación, lubricantes alimentarios H1, grasa industrial, aceite hidráulico, lubricación automática, mantenimiento predictivo, análisis aceite"/>
+  <meta name="author" content="WGM - Works Gestión de Mantenimiento"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://lubdiag.com/"/>
+  <meta property="og:type" content="website"/><meta property="og:url" content="https://lubdiag.com/"/><meta property="og:title" content="Diagnóstico de Lubricación Industrial Gratuito | LubDiag"/><meta property="og:description" content="Evalúe sus prácticas de lubricación en 2 minutos. Recomendaciones personalizadas por equipo."/><meta property="og:locale" content="es_ES"/>
+  <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Diagnóstico de Lubricación Industrial Gratuito"/><meta name="twitter:description" content="Evalúe sus prácticas de lubricación en 2 minutos."/>
+  <link rel="alternate" hreflang="es" href="https://lubdiag.com/"/><link rel="alternate" hreflang="x-default" href="https://lubdiag.com/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%231a5276'/><circle cx='50' cy='50' r='12' fill='none' stroke='white' stroke-width='5'/><line x1='50' y1='18' x2='50' y2='30' stroke='white' stroke-width='4' stroke-linecap='round'/><line x1='50' y1='70' x2='50' y2='82' stroke='white' stroke-width='4' stroke-linecap='round'/><line x1='18' y1='50' x2='30' y2='50' stroke='white' stroke-width='4' stroke-linecap='round'/><line x1='70' y1='50' x2='82' y2='50' stroke='white' stroke-width='4' stroke-linecap='round'/></svg>"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"LubDiag - Diagnóstico de Lubricación Industrial","url":"https://lubdiag.com","description":"Herramienta gratuita de diagnóstico de lubricación industrial.","applicationCategory":"IndustrialApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"creator":{"@type":"Organization","name":"WGM - Works Gestión de Mantenimiento","url":"https://wgmlubricantes.com","telephone":"+34918063172","email":"lubricantes@wgmsl.com","address":{"@type":"PostalAddress","streetAddress":"Avd. de la Industria 37 b-12","addressLocality":"Tres Cantos","addressRegion":"Madrid","postalCode":"28760","addressCountry":"ES"}}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Con qué frecuencia se debe lubricar un rodamiento industrial?","acceptedAnswer":{"@type":"Answer","text":"Depende de temperatura, carga y ambiente. En condiciones moderadas (40-80°C, carga media), cada 3 meses. En extremas (>120°C, carga pesada), quincenal o continuo con lubricadores automáticos."}},{"@type":"Question","name":"¿Qué es un lubricante alimentario H1?","acceptedAnswer":{"@type":"Answer","text":"Un lubricante certificado NSF para uso en industria alimentaria, seguro en contacto incidental con alimentos. Obligatorio en líneas de producción alimentaria."}},{"@type":"Question","name":"¿Cuándo hacer análisis de aceite?","acceptedAnswer":{"@type":"Answer","text":"Cada 3-6 meses en equipos críticos. Detecta contaminación, desgaste y degradación antes de provocar averías."}},{"@type":"Question","name":"¿Qué ventajas tiene la lubricación automática perma?","acceptedAnswer":{"@type":"Answer","text":"Suministro continuo dosificado, reduce paradas, elimina riesgo de sobre/sub-engrase, ideal para puntos de difícil acceso y entornos hostiles."}},{"@type":"Question","name":"¿Cómo elegir el lubricante industrial correcto?","acceptedAnswer":{"@type":"Answer","text":"Depende del equipo, temperatura, carga, ambiente y certificaciones. Un diagnóstico profesional analiza todos estos factores."}}]}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'DM Sans',-apple-system,sans-serif;color:#1e293b;background:linear-gradient(165deg,#f8fafc,#eef2f7 40%,#e8ecf4);min-height:100vh}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .seo{max-width:720px;margin:0 auto;padding:60px 20px 40px}
+    .seo h2{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;color:#0f172a;margin:40px 0 12px}
+    .seo h3{font-size:16px;font-weight:600;color:#1a5276;margin:24px 0 8px}
+    .seo p{font-size:15px;line-height:1.7;color:#475569;margin-bottom:14px}
+    .seo .fq{padding:16px 0;border-bottom:1px solid rgba(120,130,140,0.1)}
+    .seo .fq b{font-size:15px;color:#1e293b;display:block;margin-bottom:6px}
+    .seo .fq span{font-size:14px;color:#64748b;line-height:1.6}
+    .sf{max-width:720px;margin:0 auto;padding:30px 20px;text-align:center;border-top:1px solid rgba(120,130,140,0.12)}
+    .sf a{font-size:11px;color:#94a3b8;text-decoration:none;margin:0 6px}
+    .app-on .seo,.app-on .sf{display:none}
+  </style>
+</head>
+<body>
+<div id="app"></div>
+
+<!-- SEO CONTENT (hidden when React loads) -->
+<article class="seo">
+  <header style="text-align:center;margin-bottom:40px">
+    <h1 style="font-family:'Instrument Serif',serif;font-size:32px;font-weight:400;color:#0f172a;line-height:1.2;margin-bottom:12px">Diagnóstico de Lubricación Industrial Gratuito</h1>
+    <p style="font-size:17px;color:#64748b;max-width:500px;margin:0 auto">Evalúe sus prácticas de lubricación en 2 minutos y reciba recomendaciones personalizadas por equipo con productos específicos y frecuencias de lubricación.</p>
+  </header>
+  <h2>¿Qué es un diagnóstico de lubricación industrial?</h2>
+  <p>Un diagnóstico de lubricación industrial es una evaluación sistemática de las prácticas de lubricación de una planta. Analiza los tipos de equipos (sistemas hidráulicos, reductores, rodamientos, compresores, cadenas), las condiciones operativas de cada uno (temperatura, carga, ambiente), y las prácticas de mantenimiento (frecuencia de cambio, análisis de aceite, plan documentado). Una lubricación incorrecta causa hasta el 50% de los fallos prematuros en rodamientos y engranajes industriales.</p>
+  <h2>Calculadora de lubricación: ¿cómo funciona LubDiag?</h2>
+  <p>LubDiag es una herramienta online gratuita que diagnostica en 4 pasos: identifica su sector industrial y certificaciones necesarias (H1, biodegradable), analiza cada equipo con sus condiciones, evalúa sus prácticas actuales, y genera un informe con puntuación, frecuencias de lubricación recomendadas y productos específicos.</p>
+  <h2>Frecuencias de lubricación recomendadas</h2>
+  <h3>Rodamientos y cojinetes</h3>
+  <p>Condiciones moderadas (40-80°C, carga media): cada 3 meses. Alta temperatura (80-120°C) con carga pesada: cada 6 semanas o mensual. Extremas (>120°C): quincenal o lubricación automática con sistemas perma.</p>
+  <h3>Sistemas hidráulicos</h3>
+  <p>Cambio de aceite cada 4.000-8.000 horas según temperatura y carga. Análisis de aceite cada 6 meses.</p>
+  <h3>Reductores y engranajes</h3>
+  <p>Cambio cada 4.000-10.000 horas. Reductores de tornillo sinfín requieren mayor viscosidad. En alimentaria, usar H1 como CASSIDA FLUID GL o WG.</p>
+  <h3>Cadenas transportadoras</h3>
+  <p>Lubricación diaria o semanal. En hornos (>120°C): diaria con CASSIDA CHAIN OIL HTE. Cámaras frigoríficas: CASSIDA CHAIN OIL LT.</p>
+  <h3>Compresores</h3>
+  <p>Cambio cada 3.000-8.000 horas. En alimentaria: aceites H1 como CASSIDA FLUID CR.</p>
+  <h2>Lubricantes alimentarios H1</h2>
+  <p>Obligatorios en industria alimentaria, bebidas, farmacéutica y cosmética. Certificados NSF International. Incluyen aceites hidráulicos H1, aceites para reductores H1, grasas H1 y lubricantes de cadenas H1.</p>
+  <h2>Lubricación automática perma</h2>
+  <p>Los lubricadores perma (Classic, Futura, Flex, Nova) suministran grasa o aceite de forma continua durante 1-12 meses. Ideales para puntos de difícil acceso y entornos hostiles. Disponibles en multipropósito, EP, alta temperatura, alta velocidad, biodegradable y H1.</p>
+  <h2>Preguntas frecuentes</h2>
+  <div class="fq"><b>¿Con qué frecuencia se debe lubricar un rodamiento industrial?</b><span>En condiciones moderadas cada 3 meses. En extremas, quincenal o continuo con lubricadores automáticos.</span></div>
+  <div class="fq"><b>¿Qué es un lubricante H1?</b><span>Lubricante certificado NSF para contacto incidental con alimentos. Obligatorio en industria alimentaria.</span></div>
+  <div class="fq"><b>¿Cuándo hacer análisis de aceite?</b><span>Cada 3-6 meses en equipos críticos para detectar problemas antes de averías.</span></div>
+  <div class="fq"><b>¿Ventajas de la lubricación automática?</b><span>Suministro continuo, menos paradas, ideal para entornos hostiles y puntos inaccesibles.</span></div>
+  <div class="fq"><b>¿Cómo elegir el lubricante correcto?</b><span>Depende del equipo, temperatura, carga, ambiente y certificaciones. Nuestra herramienta lo analiza automáticamente.</span></div>
+  <div class="fq"><b>¿Lubricantes biodegradables cuándo?</b><span>Obligatorios o recomendados cerca de cursos de agua, EDAR, sector naval y zonas medioambientalmente sensibles.</span></div>
+</article>
+<footer class="sf"><div style="margin-bottom:12px"><span style="font-size:11px;color:#9ca3af">Powered by</span> <span style="font-size:16px;color:#404040;font-weight:700">WGM<sup style="font-size:8px">®</sup></span></div><div><a href="https://wgmsa.com/aviso-legal/">Aviso Legal</a><a href="https://wgmsa.com/politica-de-cookies/">Cookies</a><a href="https://wgmsa.com/movilidad-y-proteccion-de-datos/">Protección de Datos</a><a href="https://wgmsa.com/politica-de-calidad-y-medio-ambiente/">Calidad y Medio Ambiente</a></div><div style="font-size:11px;color:#b0b8c4;margin-top:10px">© 2026 Works Gestión de Mantenimiento S.L.</div></footer>
+
+<!-- REACT -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+document.body.classList.add('app-on');
+const {useState,useEffect,useRef}=React;
+
+const PC=[
+{id:"hf",name:"CASSIDA FLUID HF",cat:"food_h1",app:"hydraulic",desc:"Aceite hidráulico sintético H1",url:"https://wgmlubricantes.com/producto/cassida-fluid-hf/",temp:"moderate",load:"any"},
+{id:"hfs",name:"CASSIDA FLUID HFS",cat:"food_h1",app:"hydraulic",desc:"Aceite hidráulico H1 alto rendimiento",url:"https://wgmlubricantes.com/producto/cassida-fluid-hfs/",temp:"moderate",load:"any"},
+{id:"fmhydr",name:"CASSIDA FM HYDRAULIC OIL",cat:"food_h1",app:"hydraulic",desc:"Aceite hidráulico mineral H1",url:"https://wgmlubricantes.com/producto/cassida-fm-hydraulic-oil/",temp:"moderate",load:"light"},
+{id:"cr",name:"CASSIDA FLUID CR",cat:"food_h1",app:"compressor",desc:"Aceite H1 compresores y vacío",url:"https://wgmlubricantes.com/producto/cassida-fluid-cr-compresor-h1/",temp:"moderate",load:"any"},
+{id:"vp",name:"CASSIDA FLUID VP",cat:"food_h1",app:"compressor",desc:"Aceite H1 bombas de vacío",url:"https://wgmlubricantes.com/producto/cassida-fluid-vp-68-y-100/",temp:"moderate",load:"any"},
+{id:"gl",name:"CASSIDA FLUID GL",cat:"food_h1",app:"gearbox",desc:"Aceite H1 reductores (ISO 150-680)",url:"https://wgmlubricantes.com/producto/cassida-fluid-gl-iso-150-a-680-engranajes-h1/",temp:"moderate",load:"medium"},
+{id:"fmgear",name:"CASSIDA FM GEAR OIL",cat:"food_h1",app:"gearbox",desc:"Aceite mineral H1 engranajes",url:"https://wgmlubricantes.com/producto/cassida-fm-gear-oil-220-envase-22-lts/",temp:"moderate",load:"medium"},
+{id:"wg",name:"CASSIDA FLUID WG",cat:"food_h1",app:"gearbox",desc:"Aceite sintético H1 tornillo sinfín",url:"https://wgmlubricantes.com/producto/cassida-fluid-wg/",temp:"high",load:"heavy"},
+{id:"hds",name:"CASSIDA GREASE HDS",cat:"food_h1",app:"bearings",desc:"Grasa H1 larga duración rodamientos",url:"https://wgmlubricantes.com/producto/cassida-grease-hds/",temp:"moderate",load:"medium"},
+{id:"fmhd",name:"CASSIDA FM GREASE HD 2",cat:"food_h1",app:"bearings",desc:"Grasa H1 multiuso cojinetes",url:"https://wgmlubricantes.com/producto/cassida-grease-hd/",temp:"moderate",load:"light"},
+{id:"md2",name:"CASSIDA GREASE MD-2",cat:"food_h1",app:"bearings",desc:"Grasa H1 alta carga",url:"https://wgmlubricantes.com/producto/cassida-grease-md/",temp:"high",load:"heavy"},
+{id:"cibus",name:"Mobil SHC CIBUS",cat:"food_h1",app:"general",desc:"Aceite sintético H1 multiuso",url:"https://wgmlubricantes.com/producto/mobil-shc-cibus/",temp:"moderate",load:"any"},
+{id:"m100",name:"MOBILITH SHC 100",cat:"food_h1",app:"bearings",desc:"Grasa sintética alta velocidad",url:"https://wgmlubricantes.com/producto/mobilith-shc-100/",temp:"high",load:"light"},
+{id:"m460",name:"MOBILITH SHC 460",cat:"food_h1",app:"bearings",desc:"Grasa sintética alta temperatura",url:"https://wgmlubricantes.com/producto/mobilith-shc-460-envase-de-16-kgs/",temp:"extreme",load:"heavy"},
+{id:"ch15",name:"CASSIDA CHAIN OIL 1500",cat:"food_h1",app:"chains",desc:"Lubricante H1 cadenas",url:"https://wgmlubricantes.com/producto/cassida-chain-oil-5000-envase-22-lts/",temp:"moderate",load:"any"},
+{id:"chhte",name:"CASSIDA CHAIN OIL HTE",cat:"food_h1",app:"chains",desc:"H1 cadenas alta temperatura",url:"https://wgmlubricantes.com/producto/cassida-chain-oil-hte/",temp:"extreme",load:"any"},
+{id:"chlt",name:"CASSIDA CHAIN OIL LT",cat:"food_h1",app:"chains",desc:"H1 cadenas baja temperatura",url:"https://wgmlubricantes.com/producto/cassida-chain-oil-lt/",temp:"low",load:"any"},
+{id:"pgear",name:"PLANTOGEAR S 220",cat:"bio",app:"gearbox",desc:"Biodegradable reductores",url:"https://wgmlubricantes.com/producto/plantogear-s-reductores-biodegrables/",temp:"moderate",load:"medium"},
+{id:"pgel",name:"PLANTOGEL ECO 2 N",cat:"bio",app:"bearings",desc:"Grasa biodegradable multiuso",url:"https://wgmlubricantes.com/producto/plantogel-eco-2-n/",temp:"moderate",load:"medium"},
+{id:"phyd",name:"PLANTOHYD-S 46",cat:"bio",app:"hydraulic",desc:"Hidráulico biodegradable",url:"https://wgmlubricantes.com/producto/plantohyd-s/",temp:"moderate",load:"medium"},
+{id:"g220",name:"SHELL GADUS S2 V220 2",cat:"ind",app:"bearings",desc:"Grasa EP rodamientos",url:"https://wgmlubricantes.com/producto/shell-gadus-s2-v220-2/",temp:"moderate",load:"heavy"},
+{id:"g429",name:"SHELL GADUS S5 V429 2.5",cat:"ind",app:"bearings",desc:"Grasa sintética alta temp.",url:"https://wgmlubricantes.com/producto/shell-gadus-s5-v429-2-5-envase-de-18-kgs/",temp:"extreme",load:"heavy"},
+{id:"cspr",name:"CASSIDA CHAIN 1500 SPRAY",cat:"aux",app:"chains",desc:"Spray H1 cadenas",url:"https://wgmlubricantes.com/producto/cassida-chain-oil-1500-spray-400-cc-caja-12-und/",temp:"moderate",load:"any"},
+{id:"c5spr",name:"CASSIDA CHAIN 5000 SPRAY",cat:"aux",app:"chains",desc:"Spray seco H1 alta temp.",url:"https://wgmlubricantes.com/producto/cassida-chain-oil-5000-spray-400-gr-caja-12-uds/",temp:"high",load:"any"},
+{id:"dce",name:"CASSIDA DCE 15 SPRAY",cat:"aux",app:"general",desc:"Limpiador desengrasante H1",url:"https://wgmlubricantes.com/producto/cassida-dce-15-spay/",temp:"any",load:"any"},
+{id:"p01",name:"PERMA CLASSIC – Multiuso",cat:"auto",app:"bearings",desc:"Lubricador auto. 120cc multipropósito",url:"https://wgmlubricantes.com/producto/sf02c-perma-classic-120-cc-grasa-general/",temp:"moderate",load:"medium"},
+{id:"p02",name:"PERMA CLASSIC – EP",cat:"auto",app:"bearings",desc:"Lubricador auto. 120cc extrema presión",url:"https://wgmlubricantes.com/producto/sf02-perma-classic-120cc-grasa-extrema-presion-caja-20-uds/",temp:"moderate",load:"heavy"},
+{id:"p03",name:"PERMA CLASSIC – Alta Temp.",cat:"auto",app:"bearings",desc:"Lubricador auto. 120cc alta temp.",url:"https://wgmlubricantes.com/producto/sf03-perma-classic-120cc-grasa-alta-temperatura-caja-20-uds/",temp:"extreme",load:"any"},
+{id:"ph1",name:"PERMA CLASSIC – H1",cat:"auto",app:"bearings",desc:"Lubricador auto. 120cc grasa H1",url:"https://wgmlubricantes.com/producto/perma-futura-grasa-alimentaria-caja-20-uds-2/",temp:"moderate",load:"any"},
+{id:"pf1",name:"PERMA FUTURA – H1",cat:"auto",app:"bearings",desc:"Lubricador auto. FUTURA H1",url:"https://wgmlubricantes.com/producto/sf10-perma-futura-120cc-grasa-alimentaria-h1-caja-20-uds/",temp:"moderate",load:"any"},
+];
+const IND=[{id:"food",l:"Alimentación y Bebidas",i:"🍽️"},{id:"pharma",l:"Farmacéutica / Cosmética",i:"💊"},{id:"manufacturing",l:"Manufactura General",i:"🏭"},{id:"mining",l:"Minería / Obra Pública",i:"⛏️"},{id:"energy",l:"Energía / Utilities",i:"⚡"},{id:"marine",l:"Naval / Portuario",i:"🚢"},{id:"water",l:"Ciclo del Agua / EDAR",i:"💧"},{id:"other",l:"Otro sector",i:"🔧"}];
+const EQ=[{id:"hydraulic",l:"Sistemas Hidráulicos",i:"⚙️"},{id:"gearbox",l:"Reductores / Engranajes",i:"🔩"},{id:"bearings",l:"Rodamientos / Cojinetes",i:"🔘"},{id:"compressors",l:"Compresores / Vacío",i:"💨"},{id:"chains",l:"Cadenas / Transportadores",i:"⛓️"},{id:"pumps",l:"Bombas",i:"🔄"},{id:"motors",l:"Motores eléctricos",i:"🔌"},{id:"general",l:"Engrase general",i:"🛢️"}];
+const FI=["food","pharma"];
+const FR={hydraulic:{low:{light:"8000–10000 h",medium:"6000–8000 h",heavy:"4000–6000 h"},moderate:{light:"6000–8000 h",medium:"4000–6000 h",heavy:"3000–4000 h"},high:{light:"4000–6000 h",medium:"3000–4000 h",heavy:"2000–3000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},gearbox:{low:{light:"10000 h",medium:"8000 h",heavy:"6000 h"},moderate:{light:"8000 h",medium:"6000 h",heavy:"4000 h"},high:{light:"5000 h",medium:"4000 h",heavy:"3000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},bearings:{low:{light:"6 meses",medium:"4 meses",heavy:"2 meses"},moderate:{light:"4 meses",medium:"3 meses",heavy:"6 sem."},high:{light:"3 meses",medium:"6 sem.",heavy:"Mensual"},extreme:{light:"6 sem.",medium:"Mensual",heavy:"Quincenal"}},compressors:{low:{light:"8000 h",medium:"6000 h",heavy:"4000 h"},moderate:{light:"6000 h",medium:"4000 h",heavy:"3000 h"},high:{light:"4000 h",medium:"3000 h",heavy:"2000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},chains:{low:{light:"Semanal",medium:"2x/sem",heavy:"Diario"},moderate:{light:"2x/sem",medium:"Diario",heavy:"Diario"},high:{light:"Diario",medium:"Diario",heavy:"2x/día"},extreme:{light:"Diario",medium:"2x/día",heavy:"Continuo"}},pumps:{low:{light:"8000 h",medium:"6000 h",heavy:"4000 h"},moderate:{light:"6000 h",medium:"4000 h",heavy:"3000 h"},high:{light:"4000 h",medium:"3000 h",heavy:"2000 h"},extreme:{light:"3000 h",medium:"2000 h",heavy:"1500 h"}},motors:{low:{light:"6 meses",medium:"4 meses",heavy:"3 meses"},moderate:{light:"4 meses",medium:"3 meses",heavy:"2 meses"},high:{light:"3 meses",medium:"2 meses",heavy:"Mensual"},extreme:{light:"2 meses",medium:"Mensual",heavy:"Quincenal"}},general:{low:{light:"6 meses",medium:"4 meses",heavy:"3 meses"},moderate:{light:"4 meses",medium:"3 meses",heavy:"2 meses"},high:{light:"3 meses",medium:"2 meses",heavy:"Mensual"},extreme:{light:"2 meses",medium:"Mensual",heavy:"Quincenal"}}};
+const gf=(e,t,l)=>FR[e]?.[t]?.[l]||"Consultar";
+const STP=["industry","equipment","conditions","practices","results","capture","thanks"];
+
+// ─── SMALL UI HELPERS ───
+const Bar=({c,t})=><div style={{width:"100%",height:3,background:"rgba(120,130,140,.15)",borderRadius:2,overflow:"hidden"}}><div style={{width:`${(c/(t-1))*100}%`,height:"100%",background:"linear-gradient(90deg,#1a5276,#2e86c1)",transition:"width .5s cubic-bezier(.4,0,.2,1)",borderRadius:2}}/></div>;
+const FIn=({children,delay=0,trigger:tr})=>{const[v,sV]=useState(false);useEffect(()=>{sV(false);const t=setTimeout(()=>sV(true),delay);return()=>clearTimeout(t)},[delay,tr]);return<div style={{opacity:v?1:0,transform:v?"translateY(0)":"translateY(16px)",transition:"all .45s cubic-bezier(.4,0,.2,1)"}}>{children}</div>};
+const Gauge=({score:s})=>{const c=s>=75?"#1e8449":s>=50?"#d4ac0d":s>=30?"#e67e22":"#c0392b";const lb=s>=75?"Óptimo":s>=50?"Aceptable":s>=30?"Mejorable":"Crítico";const C=2*Math.PI*54;return<div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:8}}><svg width="140" height="140" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="rgba(120,130,140,.1)" strokeWidth="8"/><circle cx="60" cy="60" r="54" fill="none" stroke={c} strokeWidth="8" strokeDasharray={C} strokeDashoffset={C-(s/100)*C} strokeLinecap="round" transform="rotate(-90 60 60)" style={{transition:"stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1)"}}/><text x="60" y="56" textAnchor="middle" style={{fontSize:28,fontWeight:700,fill:c,fontFamily:"'DM Sans'"}}>{s}</text><text x="60" y="74" textAnchor="middle" style={{fontSize:11,fill:"#64748b",fontFamily:"'DM Sans'"}}>/100</text></svg><span style={{fontSize:14,fontWeight:600,color:c,letterSpacing:".05em",textTransform:"uppercase"}}>{lb}</span></div>};
+const PBadge=()=><div style={{display:"inline-flex"}}><div style={{width:72,height:68,borderRadius:"12px 12px 12px 3px",background:"#404040",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:1}}><span style={{fontSize:9,color:"#9ca3af",fontFamily:"'DM Sans'",fontWeight:400}}>Powered by</span><span style={{fontSize:22,color:"#fff",fontFamily:"'DM Sans'",fontWeight:700}}>WGM<sup style={{fontSize:8}}>®</sup></span></div></div>;
+const CatC={food_h1:{bg:"#eaf2e3",c:"#5a8a3c",l:"H1"},bio:{bg:"#e3f0ea",c:"#3a7d55",l:"Bio"},ind:{bg:"#e8edf2",c:"#4a6f8f",l:"Industrial"},auto:{bg:"#fef3e2",c:"#b5801e",l:"perma"},aux:{bg:"#f0ecf5",c:"#7558a0",l:"Auxiliar"}};
+const PCard=({p,eql})=>{const cc=CatC[p.cat]||CatC.ind;return<div style={{padding:"12px 14px",borderRadius:12,background:"rgba(255,255,255,.85)",border:"1px solid rgba(120,130,140,.1)",marginBottom:8}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:10}}><div style={{flex:1}}><div style={{fontSize:13,fontWeight:600,color:"#1e293b",marginBottom:2}}>{p.name}</div><div style={{fontSize:11,color:"#64748b",lineHeight:1.4,marginBottom:5}}>{p.desc}</div><div style={{display:"flex",gap:5,flexWrap:"wrap"}}><span style={{fontSize:9,fontWeight:600,padding:"2px 6px",borderRadius:20,background:cc.bg,color:cc.c,textTransform:"uppercase"}}>{cc.l}</span>{eql&&<span style={{fontSize:9,fontWeight:500,padding:"2px 6px",borderRadius:20,background:"#f1f5f9",color:"#64748b"}}>{eql}</span>}</div></div><a href={p.url} target="_blank" rel="noopener noreferrer" style={{display:"flex",alignItems:"center",padding:"7px 11px",borderRadius:8,background:"linear-gradient(135deg,#1a5276,#2e86c1)",color:"#fff",fontSize:11,fontWeight:500,textDecoration:"none",whiteSpace:"nowrap",fontFamily:"'DM Sans'",flexShrink:0}}>Ver →</a></div></div>};
+const Discl=()=><div style={{marginTop:16,padding:"14px 16px",borderRadius:10,background:"rgba(234,179,8,.06)",border:"1px solid rgba(234,179,8,.2)"}}><div style={{display:"flex",alignItems:"flex-start",gap:8}}><span style={{fontSize:16,flexShrink:0}}>⚠️</span><div style={{fontSize:11,color:"#78716c",lineHeight:1.55,fontFamily:"'DM Sans'"}}><strong style={{color:"#92400e"}}>Aviso importante:</strong> Este diagnóstico es orientativo y no sustituye el criterio de un especialista en lubricación. Las recomendaciones pueden variar según las condiciones específicas de cada instalación. Consulte con un ingeniero de lubricación antes de realizar cambios en su plan.</div></div></div>;
+const TText=({text:tx,speed:sp=12})=>{const[d,sD]=useState("");useEffect(()=>{if(!tx)return;sD("");let i=0;const iv=setInterval(()=>{i++;sD(tx.slice(0,i));if(i>=tx.length)clearInterval(iv)},sp);return()=>clearInterval(iv)},[tx,sp]);return<span>{d}{d.length<tx.length?<span style={{opacity:.4}}>▊</span>:""}</span>};
+const LF=()=><div style={{borderTop:"1px solid rgba(120,130,140,.12)",paddingTop:16,marginTop:32,textAlign:"center"}}><PBadge/><div style={{marginTop:12,display:"flex",flexWrap:"wrap",justifyContent:"center",gap:4}}>{[{l:"Aviso Legal",u:"https://wgmsa.com/aviso-legal/"},{l:"Cookies",u:"https://wgmsa.com/politica-de-cookies/"},{l:"Protección de Datos",u:"https://wgmsa.com/movilidad-y-proteccion-de-datos/"},{l:"Calidad y Medio Ambiente",u:"https://wgmsa.com/politica-de-calidad-y-medio-ambiente/"}].map((x,i)=><span key={i}><a href={x.u} target="_blank" rel="noopener noreferrer" style={{fontSize:10,color:"#94a3b8",textDecoration:"none",fontFamily:"'DM Sans'"}}>{x.l}</a>{i<3&&<span style={{fontSize:10,color:"#cbd5e1",margin:"0 4px"}}>·</span>}</span>)}</div><div style={{fontSize:10,color:"#b0b8c4",marginTop:8,fontFamily:"'DM Sans'"}}>© 2026 Works Gestión de Mantenimiento S.L.</div></div>;
+
+// ─── MAIN APP ───
+function LubDiag(){
+  const[step,setStep]=useState(0);
+  const[ci,setCi]=useState(0);
+  const[cd,setCd]=useState(false);
+  const[ans,setAns]=useState({industry:null,equipment:[],conditions:{},intervalMonths:null,hasAnalysis:null,hasPlan:null,mainProblem:null,name:"",email:"",company:"",phone:""});
+  const[sending,setSending]=useState(false);
+  const[aiText,setAiText]=useState("");
+  const[aiLoad,setAiLoad]=useState(false);
+  const aiFetched=useRef(false);
+  const cRef=useRef(null);
+  const sk=STP[step];
+
+  const up=(k,v)=>setAns(p=>({...p,[k]:v}));
+  const togEq=id=>setAns(p=>({...p,equipment:p.equipment.includes(id)?p.equipment.filter(e=>e!==id):[...p.equipment,id]}));
+  const upC=(eq,f,v)=>setAns(p=>({...p,conditions:{...p.conditions,[eq]:{...p.conditions[eq],[f]:v}}}));
+
+  const cEq=ans.equipment[ci];
+  const cEqI=EQ.find(e=>e.id===cEq);
+  const cCond=ans.conditions[cEq]||{};
+  const condOk=id=>{const c=ans.conditions[id];return c&&c.temp&&c.load&&c.environment};
+  const allOk=ans.equipment.length>0&&ans.equipment.every(condOk);
+
+  const canN=()=>{switch(sk){case"industry":return ans.industry!==null;case"equipment":return ans.equipment.length>0;case"conditions":return allOk;case"practices":return ans.intervalMonths&&ans.hasAnalysis!==null&&ans.hasPlan!==null;case"capture":return ans.email&&ans.name&&ans.company;default:return true}};
+  const scrl=()=>cRef.current?.scrollTo({top:0,behavior:"smooth"});
+  const next=()=>{if(step<STP.length-1){setStep(step+1);setCi(0);scrl()}};
+  const cN=()=>{if(ci<ans.equipment.length-1){setCi(ci+1);scrl()}};
+
+  const score=(()=>{let s=50;if(ans.hasAnalysis==="yes")s+=20;else if(ans.hasAnalysis==="sometimes")s+=10;if(ans.hasPlan==="yes")s+=15;else if(ans.hasPlan==="partial")s+=7;if(ans.intervalMonths==="3")s+=15;else if(ans.intervalMonths==="6")s+=10;else if(ans.intervalMonths==="12")s+=5;else if(ans.intervalMonths==="never")s-=15;if(ans.mainProblem==="none")s+=10;else if(ans.mainProblem==="consumption")s-=5;else if(ans.mainProblem==="contamination")s-=10;else if(ans.mainProblem==="failures")s-=15;return Math.max(5,Math.min(100,s))})();
+
+  const prods=(()=>{const isF=FI.includes(ans.industry);const isW=["water","marine"].includes(ans.industry);const am={hydraulic:"hydraulic",gearbox:"gearbox",bearings:"bearings",compressors:"compressor",chains:"chains",pumps:"hydraulic",motors:"bearings",general:"general"};const res=[];
+  ans.equipment.forEach(eq=>{const c=ans.conditions[eq]||{};const a=am[eq]||"general";const sc=PC.map(p=>{let s=0;if(p.app===a||p.app==="general")s+=10;if(isF&&p.cat==="food_h1")s+=8;if(!isF&&!isW&&p.cat==="ind")s+=8;if(isW&&p.cat==="bio")s+=10;if(c.environment==="humid"&&p.cat==="bio")s+=5;if(p.cat==="auto"&&(ans.hasPlan==="no"||ans.intervalMonths==="never"))s+=4;if(p.temp===c.temp)s+=5;if(p.temp==="any")s+=2;if(p.load===c.load)s+=3;if(p.load==="any")s+=1;return{...p,s,feq:eq}}).filter(p=>p.s>=10);sc.sort((a,b)=>b.s-a.s);sc.slice(0,2).forEach(p=>{if(!res.find(r=>r.id===p.id))res.push(p)})});
+  if((ans.hasPlan==="no"||ans.intervalMonths==="never")&&!res.find(r=>r.cat==="auto")){const pm=isF?PC.find(p=>p.id==="ph1"):PC.find(p=>p.id==="p01");if(pm)res.push({...pm,feq:"general"})};return res.slice(0,8)})();
+
+  const issues=(()=>{const is=[];if(ans.hasAnalysis==="no")is.push({sv:"high",t:"Sin análisis de aceite"});if(ans.hasAnalysis==="sometimes")is.push({sv:"med",t:"Análisis irregular"});if(ans.hasPlan==="no")is.push({sv:"high",t:"Sin plan formal de lubricación"});if(ans.hasPlan==="partial")is.push({sv:"med",t:"Plan parcial"});if(ans.intervalMonths==="never")is.push({sv:"high",t:"Intervalos no definidos"});if(ans.mainProblem==="failures")is.push({sv:"high",t:"Fallos recurrentes"});if(ans.mainProblem==="contamination")is.push({sv:"med",t:"Contaminación lubricante"});if(ans.mainProblem==="consumption")is.push({sv:"low",t:"Consumo elevado"});
+  Object.entries(ans.conditions).forEach(([eq,c])=>{const el=EQ.find(e=>e.id===eq)?.l?.split(" / ")[0]||eq;if(c.environment==="dusty")is.push({sv:"med",t:`${el}: polvoriento`});if(c.environment==="humid")is.push({sv:"med",t:`${el}: humedad`});if(c.temp==="extreme")is.push({sv:"med",t:`${el}: >120°C`})});
+  if(FI.includes(ans.industry)&&ans.hasPlan!=="yes")is.push({sv:"high",t:"Alimentaria sin plan H1 completo"});if(is.length===0)is.push({sv:"low",t:"Sin problemas críticos"});return is})();
+
+  // AI
+  useEffect(()=>{if(sk!=="results"||aiFetched.current)return;aiFetched.current=true;setAiLoad(true);
+  const il=IND.find(i=>i.id===ans.industry)?.l||"";const ed=ans.equipment.map(eq=>{const e=EQ.find(x=>x.id===eq);const c=ans.conditions[eq]||{};return`- ${e?.l}: temp=${c.temp}, carga=${c.load}, ambiente=${c.environment}, freq=${gf(eq,c.temp,c.load)}`}).join("\n");const pn=prods.slice(0,5).map(p=>p.name).join(", ");
+  const prompt=`Eres ingeniero experto en lubricación industrial de WGM. Genera un párrafo (150-200 palabras, español) para un cliente:\nSector: ${il}\nScore: ${score}/100\nEquipos:\n${ed}\nPrácticas: cambio ${ans.intervalMonths==="never"?"sin intervalo":ans.intervalMonths+" meses"}, análisis: ${ans.hasAnalysis}, plan: ${ans.hasPlan}, problema: ${ans.mainProblem}\nProductos: ${pn}\nSé directo y técnico. Menciona frecuencias por equipo. NO uses markdown. Termina invitando a contactar WGM.`;
+  (async()=>{try{const r=await fetch("https://api.deepseek.com/chat/completions",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer sk-62488986fb9b46b59fd469e7ba2c503e"},body:JSON.stringify({model:"deepseek-chat",max_tokens:600,messages:[{role:"system",content:"Eres ingeniero experto en lubricación industrial de WGM. Respondes en español, técnico pero comprensible. Sin markdown ni listas."},{role:"user",content:prompt}]})});const d=await r.json();setAiText(d.choices?.[0]?.message?.content||"")}catch(e){setAiText("Basado en el análisis de sus equipos y condiciones, le recomendamos revisar las frecuencias indicadas y considerar un plan de lubricación formal. Contacte con el equipo técnico de WGM para una auditoría en planta.")}setAiLoad(false)})()
+  },[sk]);
+
+  const handleSend=()=>{setSending(true);setTimeout(()=>{setSending(false);next()},2000)};
+
+  // STYLES
+  const bs=a=>({padding:"11px 15px",borderRadius:10,border:a?"2px solid #1a5276":"1.5px solid rgba(120,130,140,.18)",background:a?"rgba(26,82,118,.06)":"rgba(255,255,255,.5)",color:a?"#1a5276":"#475569",fontWeight:a?600:400,fontSize:14,cursor:"pointer",transition:"all .2s",fontFamily:"'DM Sans'",textAlign:"left",lineHeight:1.4});
+  const pb=d=>({padding:"14px 32px",borderRadius:10,border:"none",background:d?"rgba(120,130,140,.15)":"linear-gradient(135deg,#1a5276,#2471a3)",color:d?"#94a3b8":"#fff",fontWeight:600,fontSize:15,cursor:d?"not-allowed":"pointer",fontFamily:"'DM Sans'",letterSpacing:".02em",transition:"all .2s",width:"100%"});
+  const ist={padding:"12px 16px",borderRadius:10,border:"1.5px solid rgba(120,130,140,.2)",fontSize:14,fontFamily:"'DM Sans'",outline:"none",width:"100%",boxSizing:"border-box",background:"rgba(255,255,255,.6)",color:"#1e293b"};
+  const lb={fontSize:13,fontWeight:500,color:"#64748b",marginBottom:6,display:"block",fontFamily:"'DM Sans'"};
+
+  return<>
+  <div ref={cRef} style={{minHeight:"100vh",background:"linear-gradient(165deg,#f8fafc,#eef2f7 40%,#e8ecf4)",fontFamily:"'DM Sans',sans-serif",color:"#1e293b",padding:"0 16px",overflowY:"auto"}}>
+  <div style={{position:"fixed",inset:0,opacity:.025,pointerEvents:"none",zIndex:0,backgroundImage:"linear-gradient(rgba(0,0,0,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.1) 1px,transparent 1px)",backgroundSize:"40px 40px"}}/>
+  <div style={{maxWidth:520,margin:"0 auto",position:"relative",zIndex:1,paddingBottom:cd?60:120,paddingTop:40}}>
+
+  <FIn><div style={{textAlign:"center",marginBottom:32}}><div style={{display:"inline-flex",alignItems:"center",gap:10,marginBottom:16}}><div style={{width:38,height:38,borderRadius:8,background:"linear-gradient(135deg,#1a5276,#2e86c1)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><span style={{fontSize:18,fontWeight:600,color:"#1a5276"}}>LubDiag</span></div><h1 style={{fontFamily:"'Instrument Serif',serif",fontSize:28,fontWeight:400,color:"#0f172a",margin:"0 0 8px",lineHeight:1.2}}>Diagnóstico de Lubricación Industrial</h1><p style={{fontSize:14,color:"#64748b",margin:0,lineHeight:1.5}}>Evalúe sus prácticas en 2 minutos · Recomendaciones por equipo</p></div></FIn>
+
+  {step<5&&<Bar c={step} t={5}/>}
+  <div style={{marginTop:28}}>
+
+  {sk==="industry"&&<FIn><h2 style={{fontSize:18,fontWeight:600,marginBottom:4}}>Sector Industrial</h2><p style={{fontSize:13,color:"#64748b",marginBottom:20}}>Determina la certificación necesaria (H1, biodegradable…)</p><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>{IND.map(x=><button key={x.id} onClick={()=>up("industry",x.id)} style={bs(ans.industry===x.id)}><span style={{marginRight:8}}>{x.i}</span>{x.l}</button>)}</div><div style={{marginTop:24}}><button onClick={next} disabled={!canN()} style={pb(!canN())}>Continuar</button></div></FIn>}
+
+  {sk==="equipment"&&<FIn><h2 style={{fontSize:18,fontWeight:600,marginBottom:4}}>Equipos a Lubricar</h2><p style={{fontSize:13,color:"#64748b",marginBottom:20}}>Seleccione todos — configurará condiciones de cada uno</p><div style={{display:"flex",flexDirection:"column",gap:8}}>{EQ.map(eq=><button key={eq.id} onClick={()=>togEq(eq.id)} style={bs(ans.equipment.includes(eq.id))}><span style={{marginRight:8}}>{ans.equipment.includes(eq.id)?"☑":"☐"}</span><span style={{marginRight:6}}>{eq.i}</span>{eq.l}</button>)}</div><div style={{marginTop:24}}><button onClick={next} disabled={!canN()} style={pb(!canN())}>Continuar</button></div></FIn>}
+
+  {sk==="conditions"&&cEqI&&<FIn trigger={cEq}>
+  <div style={{display:"flex",gap:6,marginBottom:20,overflowX:"auto",paddingBottom:4}}>{ans.equipment.map((eq,i)=>{const e=EQ.find(x=>x.id===eq);const dn=condOk(eq);const ac=i===ci;return<button key={eq} onClick={()=>setCi(i)} style={{padding:"6px 12px",borderRadius:20,border:"none",cursor:"pointer",background:ac?"#1a5276":dn?"rgba(30,132,73,.1)":"rgba(120,130,140,.08)",color:ac?"#fff":dn?"#1e8449":"#64748b",fontSize:12,fontWeight:500,fontFamily:"'DM Sans'",whiteSpace:"nowrap",transition:"all .2s",flexShrink:0}}>{dn&&!ac?"✓ ":""}{e?.i} {e?.l?.split(" / ")[0]}</button>})}</div>
+  <div style={{padding:20,background:"rgba(255,255,255,.6)",borderRadius:14,border:"1px solid rgba(120,130,140,.1)"}}>
+  <h2 style={{fontSize:17,fontWeight:600,marginBottom:2,display:"flex",alignItems:"center",gap:8}}><span style={{fontSize:22}}>{cEqI.i}</span> {cEqI.l}</h2>
+  <p style={{fontSize:12,color:"#94a3b8",marginBottom:18}}>Equipo {ci+1} de {ans.equipment.length}</p>
+  <label style={lb}>Temperatura</label><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:14}}>{[["low","< 40°C"],["moderate","40–80°C"],["high","80–120°C"],["extreme","> 120°C"]].map(([k,v])=><button key={k} onClick={()=>upC(cEq,"temp",k)} style={bs(cCond.temp===k)}>{v}</button>)}</div>
+  <label style={lb}>Carga</label><div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:14}}>{[["light","Ligera"],["medium","Media"],["heavy","Pesada / EP"]].map(([k,v])=><button key={k} onClick={()=>upC(cEq,"load",k)} style={bs(cCond.load===k)}>{v}</button>)}</div>
+  <label style={lb}>Ambiente</label><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>{[["clean","Limpio"],["dusty","Polvoriento"],["humid","Húmedo"],["chemical","Químico"]].map(([k,v])=><button key={k} onClick={()=>upC(cEq,"environment",k)} style={bs(cCond.environment===k)}>{v}</button>)}</div>
+  </div>
+  <div style={{marginTop:20,display:"flex",gap:10}}>{ci>0&&<button onClick={()=>setCi(ci-1)} style={{padding:"10px 20px",borderRadius:8,border:"1.5px solid rgba(26,82,118,.25)",background:"transparent",color:"#1a5276",fontWeight:500,fontSize:14,cursor:"pointer",fontFamily:"'DM Sans'"}}>←</button>}<div style={{flex:1}}>{ci<ans.equipment.length-1?<button onClick={cN} disabled={!condOk(cEq)} style={pb(!condOk(cEq))}>Siguiente equipo →</button>:<button onClick={next} disabled={!canN()} style={pb(!canN())}>Continuar</button>}</div></div>
+  </FIn>}
+
+  {sk==="practices"&&<FIn><h2 style={{fontSize:18,fontWeight:600,marginBottom:4}}>Prácticas Actuales</h2><p style={{fontSize:13,color:"#64748b",marginBottom:20}}>Identifica áreas de mejora</p>
+  <label style={lb}>Frecuencia de cambio</label><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:14}}>{[["3","Cada 3 meses"],["6","Cada 6 meses"],["12","Cada 12 meses"],["never","Sin intervalo fijo"]].map(([k,v])=><button key={k} onClick={()=>up("intervalMonths",k)} style={bs(ans.intervalMonths===k)}>{v}</button>)}</div>
+  <label style={lb}>¿Análisis de aceite?</label><div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:14}}>{[["yes","Sí, periódico"],["sometimes","A veces"],["no","No"]].map(([k,v])=><button key={k} onClick={()=>up("hasAnalysis",k)} style={bs(ans.hasAnalysis===k)}>{v}</button>)}</div>
+  <label style={lb}>¿Plan documentado?</label><div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:14}}>{[["yes","Completo"],["partial","Parcial"],["no","No"]].map(([k,v])=><button key={k} onClick={()=>up("hasPlan",k)} style={bs(ans.hasPlan===k)}>{v}</button>)}</div>
+  <label style={lb}>Problema principal</label><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:14}}>{[["failures","Fallos"],["contamination","Contaminación"],["consumption","Consumo excesivo"],["none","Ninguno"]].map(([k,v])=><button key={k} onClick={()=>up("mainProblem",k)} style={bs(ans.mainProblem===k)}>{v}</button>)}</div>
+  <div style={{marginTop:20}}><button onClick={next} disabled={!canN()} style={pb(!canN())}>Ver Diagnóstico</button></div>
+  </FIn>}
+
+  {sk==="results"&&<FIn>
+  <div style={{textAlign:"center",marginBottom:24}}><h2 style={{fontSize:20,fontWeight:600,marginBottom:4}}>Su Diagnóstico</h2><p style={{fontSize:13,color:"#64748b"}}>{ans.equipment.length} equipo{ans.equipment.length>1?"s":""} · {IND.find(i=>i.id===ans.industry)?.l}</p></div>
+  <FIn delay={200}><Gauge score={score}/></FIn>
+  <FIn delay={400}><div style={{marginTop:24,padding:"18px 20px",background:"linear-gradient(135deg,rgba(26,82,118,.04),rgba(46,134,193,.04))",borderRadius:14,border:"1px solid rgba(26,82,118,.12)"}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}><div style={{width:24,height:24,borderRadius:6,background:"linear-gradient(135deg,#1a5276,#2e86c1)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><span style={{fontSize:13,fontWeight:600,color:"#1a5276"}}>Recomendación del Especialista</span></div><div style={{fontSize:13,color:"#334155",lineHeight:1.65}}>{aiLoad?<div style={{display:"flex",alignItems:"center",gap:8,color:"#64748b"}}><div style={{width:16,height:16,border:"2px solid rgba(26,82,118,.2)",borderTopColor:"#1a5276",borderRadius:"50%",animation:"spin .8s linear infinite"}}/>Analizando...</div>:aiText?<TText text={aiText} speed={10}/>:null}</div></div></FIn>
+  <FIn delay={600}><div style={{marginTop:16,padding:"18px 20px",background:"rgba(255,255,255,.7)",borderRadius:14,border:"1px solid rgba(120,130,140,.1)"}}><h3 style={{fontSize:14,fontWeight:600,marginBottom:12,color:"#334155"}}>Frecuencias Recomendadas</h3>{ans.equipment.map(eq=>{const e=EQ.find(x=>x.id===eq);const c=ans.conditions[eq]||{};const f=gf(eq,c.temp,c.load);const el={clean:"Limpio",dusty:"Polvo",humid:"Húmedo",chemical:"Químico"}[c.environment]||"";return<div key={eq} style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"10px 12px",marginBottom:6,borderRadius:10,background:"rgba(255,255,255,.5)",border:"1px solid rgba(120,130,140,.06)"}}><div><div style={{fontSize:13,fontWeight:600,color:"#1e293b"}}>{e?.i} {e?.l?.split(" / ")[0]}</div><div style={{fontSize:11,color:"#94a3b8"}}>{c.temp==="extreme"?">120°C":c.temp==="high"?"80-120°C":c.temp==="moderate"?"40-80°C":"<40°C"} · {c.load==="heavy"?"Pesada":c.load==="medium"?"Media":"Ligera"} · {el}</div></div><div style={{padding:"5px 10px",borderRadius:8,background:"rgba(26,82,118,.08)",fontSize:12,fontWeight:600,color:"#1a5276",whiteSpace:"nowrap"}}>{f}</div></div>})}</div></FIn>
+  <FIn delay={700}><div style={{marginTop:16,padding:"18px 20px",background:"rgba(255,255,255,.7)",borderRadius:14,border:"1px solid rgba(120,130,140,.1)"}}><h3 style={{fontSize:14,fontWeight:600,marginBottom:12,color:"#334155"}}>Hallazgos</h3>{issues.slice(0,6).map((x,i)=><div key={i} style={{display:"flex",alignItems:"flex-start",gap:10,marginBottom:7}}><span style={{width:8,height:8,borderRadius:"50%",marginTop:5,flexShrink:0,background:x.sv==="high"?"#c0392b":x.sv==="med"?"#d4ac0d":"#1e8449"}}/><span style={{fontSize:12,color:"#475569",lineHeight:1.5}}>{x.t}</span></div>)}</div></FIn>
+  <FIn delay={800}><div style={{marginTop:16,padding:"18px 20px",background:"rgba(255,255,255,.7)",borderRadius:14,border:"1px solid rgba(120,130,140,.1)"}}><h3 style={{fontSize:14,fontWeight:600,marginBottom:12,color:"#334155"}}>Productos Recomendados</h3>{prods.slice(0,4).map(p=><PCard key={p.id} p={p} eql={EQ.find(e=>e.id===p.feq)?.l?.split(" / ")[0]}/>)}{prods.length>4&&<div style={{marginTop:6,padding:"8px 12px",background:"rgba(26,82,118,.04)",borderRadius:8,border:"1px dashed rgba(26,82,118,.2)"}}><span style={{fontSize:11,color:"#1a5276"}}>+{prods.length-4} en el informe completo</span></div>}</div></FIn>
+  <FIn delay={900}><Discl/></FIn>
+  <FIn delay={1000}><div style={{marginTop:20,padding:"18px 20px",borderRadius:14,background:"linear-gradient(135deg,rgba(26,82,118,.06),rgba(46,134,193,.06))",border:"1.5px solid rgba(26,82,118,.15)"}}><div style={{fontSize:13,fontWeight:600,color:"#1a5276",marginBottom:4}}>Informe Completo Gratuito</div><div style={{fontSize:12,color:"#475569",lineHeight:1.5}}>Todos los productos, frecuencias, recomendación IA y plan de acción por email.</div></div></FIn>
+  <FIn delay={1100}><div style={{marginTop:24}}><button onClick={next} style={pb(false)}>Recibir Informe Completo →</button></div></FIn>
+  </FIn>}
+
+  {sk==="capture"&&<FIn>
+  <div style={{textAlign:"center",marginBottom:24}}><div style={{fontSize:40,marginBottom:8}}>📧</div><h2 style={{fontSize:18,fontWeight:600,marginBottom:4}}>Reciba su Informe</h2><p style={{fontSize:13,color:"#64748b"}}>Diagnóstico completo + productos + plan de acción</p></div>
+  <div style={{display:"flex",flexDirection:"column",gap:14}}>
+  <div><label style={lb}>Nombre *</label><input style={ist} placeholder="Su nombre" value={ans.name} onChange={e=>up("name",e.target.value)}/></div>
+  <div><label style={lb}>Email corporativo *</label><input style={ist} type="email" placeholder="nombre@empresa.com" value={ans.email} onChange={e=>up("email",e.target.value)}/></div>
+  <div><label style={lb}>Empresa *</label><input style={ist} placeholder="Nombre de su empresa" value={ans.company} onChange={e=>up("company",e.target.value)}/></div>
+  <div><label style={lb}>Teléfono (opcional)</label><input style={ist} type="tel" placeholder="+34 600 000 000" value={ans.phone} onChange={e=>up("phone",e.target.value)}/></div>
+  </div>
+  <div style={{marginTop:16,padding:"12px 16px",background:"rgba(255,255,255,.6)",borderRadius:10,border:"1px solid rgba(120,130,140,.1)"}}><div style={{fontSize:11,color:"#78716c",lineHeight:1.6}}>Al enviar, acepta nuestra <a href="https://wgmsa.com/movilidad-y-proteccion-de-datos/" target="_blank" rel="noopener noreferrer" style={{color:"#64748b",textDecoration:"underline"}}>Política de Protección de Datos</a>. Le enviaremos el informe y nuestro equipo técnico podrá contactarle para ofrecerle asesoramiento personalizado sobre las soluciones más adecuadas para su instalación.</div></div>
+  <div style={{marginTop:20}}><button onClick={handleSend} disabled={!canN()||sending} style={pb(!canN()||sending)}>{sending?"Enviando...":"Enviar Informe a mi Email"}</button></div>
+  </FIn>}
+
+  {sk==="thanks"&&<FIn>
+  <div style={{textAlign:"center",padding:"40px 0 0"}}>
+  <div style={{width:72,height:72,borderRadius:"50%",background:"linear-gradient(135deg,#d5f5e3,#a9dfbf)",display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 20px",fontSize:32}}>✓</div>
+  <h2 style={{fontFamily:"'Instrument Serif',serif",fontSize:22,fontWeight:400,marginBottom:8}}>¡Informe Enviado!</h2>
+  <p style={{fontSize:14,color:"#64748b",lineHeight:1.6,maxWidth:360,margin:"0 auto"}}>Hemos enviado el diagnóstico a <strong style={{color:"#1e293b"}}>{ans.email}</strong>. Un especialista revisará su caso.</p>
+  <Discl/>
+  <div style={{marginTop:24,padding:"20px 24px",borderRadius:14,background:"rgba(255,255,255,.8)",border:"1px solid rgba(120,130,140,.12)",textAlign:"left"}}><div style={{fontSize:13,fontWeight:600,color:"#334155",marginBottom:8}}>¿Asesoramiento inmediato?</div><p style={{fontSize:12,color:"#64748b",lineHeight:1.5,margin:"0 0 14px"}}>Auditorías en planta, planes a medida y formación.</p><div style={{display:"flex",gap:10,flexWrap:"wrap"}}><a href="mailto:lubricantes@wgmsl.com" style={{padding:"10px 20px",borderRadius:8,background:"linear-gradient(135deg,#1a5276,#2471a3)",color:"#fff",fontSize:13,fontWeight:500,textDecoration:"none",fontFamily:"'DM Sans'"}}>Solicitar Visita</a><a href="tel:+34918063172" style={{padding:"10px 20px",borderRadius:8,border:"1.5px solid rgba(26,82,118,.3)",color:"#1a5276",fontSize:13,fontWeight:500,textDecoration:"none",fontFamily:"'DM Sans'"}}>918 063 172</a></div></div>
+  <div style={{marginTop:16,padding:"16px 20px",borderRadius:14,background:"rgba(255,255,255,.8)",border:"1px solid rgba(120,130,140,.12)",textAlign:"left"}}><div style={{fontSize:13,fontWeight:600,color:"#334155",marginBottom:8}}>Tienda online</div><a href="https://wgmlubricantes.com/tienda/" target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",padding:"10px 20px",borderRadius:8,background:"rgba(26,82,118,.06)",border:"1.5px solid rgba(26,82,118,.15)",color:"#1a5276",fontSize:13,fontWeight:500,textDecoration:"none",fontFamily:"'DM Sans'"}}>wgmlubricantes.com/tienda →</a></div>
+  </div>
+  </FIn>}
+
+  </div>
+  <LF/>
+  {((step>0&&step<5&&sk!=="conditions")||(sk==="conditions"&&ci===0))&&<button onClick={()=>setStep(step-1)} style={{position:"fixed",bottom:cd?20:90,left:20,width:40,height:40,borderRadius:"50%",background:"rgba(255,255,255,.9)",border:"1px solid rgba(120,130,140,.15)",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,color:"#64748b",boxShadow:"0 2px 8px rgba(0,0,0,.06)",zIndex:10}}>←</button>}
+  </div></div>
+  {!cd&&<div style={{position:"fixed",bottom:0,left:0,right:0,zIndex:1000,background:"rgba(15,23,42,.97)",backdropFilter:"blur(8px)",padding:"16px 20px",borderTop:"1px solid rgba(255,255,255,.1)"}}><div style={{maxWidth:520,margin:"0 auto"}}><p style={{fontSize:12,color:"#cbd5e1",lineHeight:1.5,margin:"0 0 12px",fontFamily:"'DM Sans'"}}>Utilizamos cookies para mejorar su experiencia. Más información en nuestra <a href="https://wgmsa.com/politica-de-cookies/" target="_blank" rel="noopener noreferrer" style={{color:"#93c5fd",textDecoration:"underline"}}>Política de Cookies</a>.</p><div style={{display:"flex",gap:10}}><button onClick={()=>setCd(true)} style={{padding:"8px 20px",borderRadius:6,border:"none",background:"#2563eb",color:"#fff",fontSize:12,fontWeight:600,cursor:"pointer",fontFamily:"'DM Sans'"}}>Aceptar</button><button onClick={()=>setCd(true)} style={{padding:"8px 20px",borderRadius:6,border:"1px solid rgba(255,255,255,.2)",background:"transparent",color:"#94a3b8",fontSize:12,fontWeight:500,cursor:"pointer",fontFamily:"'DM Sans'"}}>Solo necesarias</button></div></div></div>}
+  </>;
+}
+
+ReactDOM.render(<LubDiag/>,document.getElementById('app'));
+</script>
+</body>
+</html>
