@@ -21,20 +21,21 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'DM Sans',-apple-system,sans-serif;color:#1e293b;background:linear-gradient(165deg,#f8fafc,#eef2f7 40%,#e8ecf4);min-height:100vh}
     @keyframes spin{to{transform:rotate(360deg)}}
-    .seo{max-width:720px;margin:0 auto;padding:60px 20px 40px}
+    .seo{max-width:720px;margin:0 auto;padding:60px 20px 40px;display:none}
     .seo h2{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;color:#0f172a;margin:40px 0 12px}
     .seo h3{font-size:16px;font-weight:600;color:#1a5276;margin:24px 0 8px}
     .seo p{font-size:15px;line-height:1.7;color:#475569;margin-bottom:14px}
     .seo .fq{padding:16px 0;border-bottom:1px solid rgba(120,130,140,0.1)}
     .seo .fq b{font-size:15px;color:#1e293b;display:block;margin-bottom:6px}
     .seo .fq span{font-size:14px;color:#64748b;line-height:1.6}
-    .sf{max-width:720px;margin:0 auto;padding:30px 20px;text-align:center;border-top:1px solid rgba(120,130,140,0.12)}
+    .sf{max-width:720px;margin:0 auto;padding:30px 20px;text-align:center;border-top:1px solid rgba(120,130,140,0.12);display:none}
     .sf a{font-size:11px;color:#94a3b8;text-decoration:none;margin:0 6px}
     .app-on .seo,.app-on .sf{display:none}
   </style>
 </head>
 <body>
 <div id="app"></div>
+<noscript><style>.seo,.sf{display:block!important}</style></noscript>
 
 <!-- SEO CONTENT (hidden when React loads) -->
 <article class="seo">
