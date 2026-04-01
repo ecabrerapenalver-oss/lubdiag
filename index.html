@@ -73,6 +73,8 @@
 <footer class="sf"><div style="margin-bottom:12px"><span style="font-size:11px;color:#9ca3af">Powered by</span> <span style="font-size:16px;color:#404040;font-weight:700">WGM<sup style="font-size:8px">®</sup></span></div><div><a href="https://wgmsa.com/aviso-legal/">Aviso Legal</a><a href="https://wgmsa.com/politica-de-cookies/">Cookies</a><a href="https://wgmsa.com/movilidad-y-proteccion-de-datos/">Protección de Datos</a><a href="https://wgmsa.com/politica-de-calidad-y-medio-ambiente/">Calidad y Medio Ambiente</a></div><div style="font-size:11px;color:#b0b8c4;margin-top:10px">© 2026 Works Gestión de Mantenimiento S.L.</div></footer>
 
 <!-- REACT -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("g88STP-AKXdrzgK5FsD_H");</script>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -198,7 +200,7 @@ function LubDiag(){
   const p1=fetch("https://formsubmit.co/ajax/lubricantes@wgmsl.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(wgmBody)}).catch(()=>{});
   // Email to CLIENT (EmailJS)
   const clientParams={to_email:ans.email,name:ans.name,company:ans.company,score:`${score}/100 — ${scoreLabel}`,sector:IND.find(i=>i.id===ans.industry)?.l||"",equipos:eqData,hallazgos:issData,productos:prodData,recomendacion:aiText||"No disponible",practicas:`Cambios: ${ans.intervalMonths==="never"?"Sin intervalo fijo":"Cada "+ans.intervalMonths+" meses"} | Análisis: ${ans.hasAnalysis==="yes"?"Sí":"No"} | Plan: ${ans.hasPlan==="yes"?"Completo":ans.hasPlan==="partial"?"Parcial":"No"}`};
-  const p2=fetch("https://api.emailjs.com/api/v1.0/email/send",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({service_id:"service_t4jc08m",template_id:"template_rxtwyvd",user_id:"g88STP-AKXdrzgK5FsD_H",template_params:clientParams})}).catch(()=>{});
+  const p2=window.emailjs.send("service_t4jc08m","template_rxtwyvd",clientParams).catch(()=>{});
   Promise.all([p1,p2]).then(()=>{setSending(false);next()})
 };
 
